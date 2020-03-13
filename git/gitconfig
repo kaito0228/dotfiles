@@ -36,6 +36,7 @@
   # checkout
   co = checkout                     # checkout
   nb = checkout -b                  # create and switch to a new branch (mnemonic: "git new branch branchname...")
+  sw = switch
 
   # cherry-pick
   cp = cherry-pick -x               # grab a change from a branch
@@ -89,6 +90,11 @@
   svnr = svn rebase
   svnd = svn dcommit
   svnl = svn log --oneline --show-commit
+
+  # hub
+  pr = pull-request
+	see = browse
+	push-f = push --force-with-lease
 [format]
   pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
 [mergetool]
@@ -125,3 +131,16 @@
   enabled = true
 [include]
   path = .gitconfig.user
+[github]
+	user = kaito0228
+[ghi]
+	token = !security find-internet-password -a kaito0228 -s github.com -l 'ghi token' -w
+[user]
+	name = kaito0228
+  email = aqua.timez.saiko@gmail.com
+[url "git@ghe.example.org:"]
+  insteadOf = https://ghe.example.org/
+[rebase]
+	autostash = true
+[ghq]
+	root = /Users/ryo_shirai/workspace
